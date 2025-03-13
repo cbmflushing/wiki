@@ -10,7 +10,7 @@ modified: 2025-03-13
     - [[gospel-meeting]] streaming, recording, and archiving, webpages #quarterly #cbmministry
 - Events
     - [[northeast-christian-conference]] A/V setup, livestreaming, recording #yearly
-    - [[youth weekend conference]] A/V, livestreaming, recording #yearly #cbmyouth
+    - [[youth-weekend-conference]] A/V, livestreaming, recording #yearly #cbmyouth
 - Website
     - [[cbmministry-website]] maintenance and overhaul
     - [[cbmyouth-website]] maintenance

@@ -1,5 +1,9 @@
 # CBM Wiki
 
+# Status
+on hold for right now, has issues with relative images, can't display excalidraw diagrams or work with any plugins
+if those are solved, then might pick this back up
+
 # Setup
 One time setup: on the server to run the webserver, from project root, run `docker compose -f webserver/docker-compose.yml up`
 
