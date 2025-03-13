@@ -20,8 +20,7 @@ cd Obsidian-Mkdocs-Gitsync
 # 4. add your GitHub repo name at env variable `HIDE_FOLDERS`
 
 # fix permissions; may have to be run a second time after starting the container
-sudo chmod -R 777 repository/
-sudo chown -R 1000:1000 repository/
+sudo chmod -R 777 repository/ && sudo chown -R 1000:1000 repository/
 
 # start the container
 docker compose up -d
