@@ -13,7 +13,7 @@ cause: Computer turned off, Tim reported Windows update then started running whe
 
 FYI I think I found a workaround for OBS not capturing OpenLP output. However OpenLP does the projection as of v3.0.2 now lends it to be invisible to display capture via Zoom or OBS, so the workaround is to use a browser source (e.g. use the browser song display that we're using for Zoom screensharing). See screenshot for details  
 I've set up the Sunday (fullscreen webcam) with screenshare already, so everything should just work  
-![[openlp-display-workaround-in-obs.png]]  
+![[assets/openlp-display-workaround-in-obs.png]]
 
 **References:**   
 https://discuss.openlp.org/d/5661-openlp-and-obs-best-set-up-solved  
@@ -28,9 +28,7 @@ https://sites.google.com/site/anvilsoup/downloads/openlp-and-obs-integration
 
 **Solution:** There is a chrome flag that can be set to turn this behavior off, and allow it to refresh in the background.
 
-1. Go to [chrome://flags](chrome://flags/)
+1. Go to [[chrome://flags/|chrome://flags]]
 2. Set the `calculate-native-win-occlusion` flag to false/off
-
-[](https://wiki.andrewchen.website/books/av/page/issues-and-resolutions/edit?content-id=bkmrk-https%3A%2F%2Fsupport.goog&content-text=https%3A%2F%2Fsupport.google.com%2Fchrome%2Fthread%2F76386937%3F "Jump to section in editor")
 
 https://support.google.com/chrome/thread/76386937?hl=en&sjid=10679465673187630674-NA

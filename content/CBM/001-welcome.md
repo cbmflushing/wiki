@@ -8,6 +8,3 @@ Hello, this guide is designed to gather and organize essential knowledge for tho
 - [CBMAV project tracker - superthread](https://app.superthread.com/cbm/board-5-tech)
 - [[av-training]]
 
-
-
-

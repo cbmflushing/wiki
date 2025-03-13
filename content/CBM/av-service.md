@@ -5,7 +5,7 @@ modified: 2025-03-13
 ## A list of tech activities
 
 - Meetings
-    - [[sunday messages]]/open sharing streaming and recording, [[message-posting]] #weekly #cbmministry  
+    - [[sunday-messages]]/open sharing streaming and recording, [[message-posting]] #weekly #cbmministry  
     - [[wednesday-night-bible-study]] streaming and archiving #weekly #cbmministry
     - [[gospel-meeting]] streaming, recording, and archiving, webpages #quarterly #cbmministry
 - Events
