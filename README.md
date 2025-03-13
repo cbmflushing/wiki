@@ -5,7 +5,7 @@ One time setup: on the server to run the webserver, from project root, run `dock
 
 # Usage
 1. change content in /content either directly on Github, or by pushing changes to Github
-2. changes should be reflected on the webserver after 30 seconds
+2. changes should be reflected on the webserver after 30 seconds at http://localhost:8765
 
 # Components
 1. content - Primarily uses Obsidian flavored .md (markdown) files as content

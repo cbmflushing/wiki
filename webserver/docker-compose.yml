@@ -4,11 +4,11 @@ services:
     container_name: perlite
     restart: unless-stopped
     environment:
-      - NOTES_PATH=wiki/content/CBM # if you change this name, please also adjust below container path /Demo
+      - NOTES_PATH=docs # if you change this name, please also adjust below container path /Demo
       - HIDE_FOLDERS=docs,private,trash,Obsidian-Gitsync-Perlite,wiki # add your GitHub repo name here
       - LINE_BREAKS=true
     volumes:
-      - ./repository/root:/var/www/perlite/wiki/content/CBM:ro # adjust container path /Demo if you want to use a custom NOTES_PATH
+      - ./repository/root/wiki/content/CBM:/var/www/perlite/docs:ro # adjust container path /Demo if you want to use a custom NOTES_PATH
       - ./index.php:/var/www/perlite/index.php:ro # optional; allows to customize the website's title etc.
     #networks:
     #  - proxy

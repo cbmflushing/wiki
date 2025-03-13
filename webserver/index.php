@@ -10,7 +10,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 require 'helper.php';
 
-$title = "Obsidian-Gitsync-Perlite";
+$title = "CBM wiki";
 $menu = menu($rootDir);
 $jsonGraphData = getfullGraph($rootDir);
 
