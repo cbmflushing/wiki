@@ -1,0 +1,57 @@
+services:
+  perlite:
+    image: sec77/perlite:latest
+    container_name: perlite
+    restart: unless-stopped
+    environment:
+      - NOTES_PATH=wiki/content/CBM # if you change this name, please also adjust below container path /Demo
+      - HIDE_FOLDERS=docs,private,trash,Obsidian-Gitsync-Perlite,wiki # add your GitHub repo name here
+      - LINE_BREAKS=true
+    volumes:
+      - ./repository/root:/var/www/perlite/wiki/content/CBM:ro # adjust container path /Demo if you want to use a custom NOTES_PATH
+      - ./index.php:/var/www/perlite/index.php:ro # optional; allows to customize the website's title etc.
+    #networks:
+    #  - proxy
+
+  perlite-web:
+    image: nginx:stable-alpine
+    container_name: perlite-web
+    restart: unless-stopped
+    ports:
+      - 8765:80
+    volumes_from:
+      - perlite
+    volumes:
+      - ./perlite.conf:/etc/nginx/conf.d/default.conf:ro # bind mount the necessary nginx config into container
+    depends_on:
+      - perlite
+    #networks:
+    #  - proxy
+    #labels:
+    #  - traefik.enable=true
+    #  - traefik.http.routers.perlite.rule=Host(`kb.example.com`)
+    #  - traefik.http.services.perlite.loadbalancer.server.port=80
+    #  - traefik.docker.network=proxy
+    #  # Part for optional traefik middlewares
+    #  - traefik.http.routers.perlite.middlewares=basic-auth@file  
+
+  perlite-git-sync:
+    # self-built image from https://github.com/kubernetes/git-sync
+    image: l4rm4nd/git-sync:latest
+    container_name: perlite-git-sync
+    restart: unless-stopped
+    user: 1000:1000
+    environment:
+      #- GIT_SYNC_USERNAME=<USERNAME> # optional; your github username if repo is private
+      #- GIT_SYNC_PASSWORD=<ACCESS-TOKEN> # optional; your github access token if repo is private
+      - GIT_SYNC_PERIOD=30s
+      - GIT_SYNC_REPO=https://github.com/cbmflushing/wiki # your github repository to sync
+      - GIT_SYNC_ROOT=/tmp/git/root # do not change this
+    volumes:
+      - ./repository:/tmp/git # volume bind mount path to store synced github repo data
+    #networks:
+    #  - proxy
+
+#networks:
+#  proxy:
+#    external: true
